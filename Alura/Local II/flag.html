@@ -1,0 +1,31 @@
+<canvas width = '600' height = '400'> </canvas>
+
+<script> 
+
+    scream = document.querySelector('canvas'); 
+    paint = scream.getContext('2d'); 
+
+    paint.fillStyle = 'green'; 
+    paint.fillRect(0, 0, 600, 400); 
+
+
+    paint.beginPath()
+    paint.fillStyle = 'yellow'
+    paint.moveTo(540, 200); 
+    paint.lineTo(300, 50); 
+    paint.lineTo(60, 200);
+    paint.fill(); 
+
+    paint.beginPath()
+    paint.fillStyle = 'yellow'
+    paint.moveTo(540, 200); 
+    paint.lineTo(300, 350); 
+    paint.lineTo(60, 200);
+    paint.fill(); 
+
+    paint.fillStyle = 'darkblue'; 
+    paint.beginPath();
+    paint.arc(300, 200, 100, 0 , 2 * 3.14);
+    paint.fill(); 
+
+</script>
