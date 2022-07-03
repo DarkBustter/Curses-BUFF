@@ -1,0 +1,46 @@
+<canvas width = '600' height = '400'></canvas>
+<script> 
+
+    scream = document.querySelector('canvas');
+    paint = scream.getContext('2d');
+
+    paint.fillStyle = 'grey'; 
+    paint.fillRect(0, 0, 600, 400); 
+    paint.fill();
+
+    function drawCicle(x, y, raio){
+
+        paint.fillStyle = 'blue';
+        paint.beginPath(); 
+        paint.arc(x, y, raio, 0, 2 * Math.PI);
+        paint.fill(); 
+
+    }
+
+    function clearScream(){
+        paint.clearRect(0, 0, 600, 400);
+    }
+    
+
+    for(var x = 20; x < 600; x++){
+        //parametro para limpar o retangulo no loop
+        //isso para nao ficar uma bolinha atras da outra, e sim para acabar parecendo uma animacao
+        drawCicle(x, 20, 10);
+
+    }
+
+    var x = 20
+
+    function atualizaTela(){
+        clearScream();
+        drawCicle(x, 20, 10);
+        x++;
+    }
+
+    setInterval(atualizaTela, 20)
+    //funcao propria do javascript que tem como parametro 
+    //a chamada de uma funcao + o numero em milisegundos de pausa entre uma chamada e outra
+    //pela funcao passada como parametro ser um for... a execucao da funcao de forma periodica
+    //e feita de 20 em 20 milisegundos
+
+</script>
