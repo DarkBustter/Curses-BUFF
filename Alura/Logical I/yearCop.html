@@ -1,0 +1,41 @@
+<html> 
+
+    <head> 
+        <meta charset = 'UTF-8'> 
+        <meta name =  'viewport'>
+        <title> Alura </title>
+
+    </head>
+    <body>
+
+        <script> 
+            function skip(){
+                document.write('<br>')
+            }
+
+            function show(phrase){
+                document.write(phrase)
+                document.write('<br>')
+            }
+
+            var limite = parseInt(prompt('Entre com a data limite:'));
+            var anaCopa = 1930;
+
+            while(anoCopa <= limite){
+                show('Teve Copa em: ' + anoCopa);
+                anoCopa = anaCopa + 4; 
+            }
+
+            /*
+            A estrutura de repeticao while serve para determinar uma repeticao, sendo
+            baseada em um valor booleano, semelhante as condicionais. Repete ate surgir o 
+            primeiro false.
+
+            */ 
+        </script>
+
+    </body>
+
+</html>
+
+
