@@ -1,0 +1,26 @@
+<canvas width = '400' height = '400'> </canvas>
+
+<script> 
+
+    var scream = document.querySelector('canvas');
+    var paint = scream.getContext('2d'); 
+    
+    paint.fillStyle = 'white'
+    paint.fillRect(0, 0, 400, 400); 
+
+    paint.fillStyle = 'black';
+    paint.beginPath();
+    paint.moveTo(50,50);
+    paint.lineTo(400, 400);
+    paint.lineTo(50, 400)
+    paint.fill(); 
+
+    paint.fillStyle = 'white'; 
+    paint.beginPath(); 
+    paint.moveTo(100, 175); 
+    paint.lineTo(275, 350); 
+    paint.lineTo(100, 350);
+    paint.fill(); 
+
+
+</script>
