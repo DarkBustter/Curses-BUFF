@@ -1,0 +1,44 @@
+<canvas width = '600' height = '400'> </canvas>
+<meta charset = 'utf-8'> 
+
+<script>
+
+    var scream = document.querySelector('canvas');
+    //Esse querySelector serve para pegar o canvas e trazer para dentro da variavel tela
+    var paint = scream.getContext('2d');
+    //com .getContext('2d') eu estou pedindo para fazer um pincel em 2d 
+    //Entao qualquer alteracao que eu fizer sobre o pincel vai alterar o canvas ou scream (variavel)
+
+    paint.fillStyle = 'lightgrey';
+    //Parametro .fillStyle = 'color' - serve para definer a cor de background do retangulo
+    paint.fillRect(0,0, 600, 400);
+    //Com o parametro fillRect - eu preencho um retangulo no canvas, e dentro do mesmo temos argumentos
+    //1. numero - posicao no eixo das abcissas, 2. numero - posicao no eixo das ordenadas,
+    //3. numero (posicao final de x) - largura do retangulo, 4. numero (posicao final de y) altura do retangulo.
+    //O wight e hight da tag canvas vai limitar o tamnho da figura representada (retangulo)
+
+    paint.fillStyle = 'green'; 
+    paint.fillRect(0,0,200,400);
+
+    paint.fillStyle  = 'red'; 
+    paint.fillRect(400,0, 200, 400);
+
+    paint.fillStyle = 'yellow'; 
+    paint.beginPath();
+    //Parametro beginPath serve para declarar que o pincel fara um "caminho"
+    paint.moveTo(300, 200);
+    //Parametro moveTo - serve para mover o pincel ate um coordenada
+    paint.lineTo(200, 400);
+    paint.lineTo(400, 400);
+    //Parametro .lineTo - serve para fazer uma linha de moveTo ate a coordenada passada como argumento
+    paint.fill(); 
+    //Parametro fill - para preencher a forma resultante de moveTo e lineTo    
+
+    paint.fillStyle = 'blue'; 
+    paint.beginPath(); 
+    paint.arc(300, 200, 50, 0, 2 * 3.14);
+    paint.fill();
+    //O parametro .arc - 1.numero posicao no eixo x, 2. numero posicao no eixo y,
+    //3. numero raio do circulo, 4. numero angulo inicial, 5. numero angulo final em radianos.
+
+</script>
