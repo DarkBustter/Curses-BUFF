@@ -1,0 +1,27 @@
+<canvas width = '600' height = '400'> </canvas>
+
+<script> 
+
+    var scream = document.querySelector('canvas');
+    var paint = scream.getContext('2d');
+
+    paint.fillStyle = 'grey'; 
+    paint.fillRect(0,0,600,400);
+
+    function exibeAlerta(evento){
+        alert('Cliquei'); 
+        console.log(evento)
+        //Se voce fizer desse modo, passando um parametro no qual o navegador vai receber e executar 
+        //nos coseguimos monitorar de forma detalhada aonde houve o click dentro da tela, por parte do usuario;
+
+
+    }
+    scream.onclick = exibeAlerta;
+    //no momento em que clicar na tela, exibe o alerta
+    //essa e a funcao do parametro .onclick 
+    //logo o navegador chama o onclick 
+
+    //O onclick e atribuido ao exibeAlerta, que por sua vez e chamado pelo navegador
+    //, do qual passamos o parametro evento que tem as coordenadas do nosso mouse.
+
+</script>
