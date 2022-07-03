@@ -1,0 +1,52 @@
+<html>
+    <head> 
+        <meta charset = 'UTF-8'> 
+        <meta name = 'viwerpot'> 
+        <title> Alura </title>
+
+    </head>
+    <body>
+
+        <script>
+
+            function show(phrase){
+                document.write('<br>');
+                document.write(phrase);
+                document.write('<br>');
+
+            }
+
+            function skip(){
+                document.write('<br>');
+            }
+
+            function calculaImc(height, weight){
+                return weight / (height * height);
+            }
+
+            var name = prompt('Inform your name: ');
+            var heightInform = prompt(name + ', inform your height');
+            var weightInform = prompt(name + ', inform your weight')
+
+            var imc = calculaImc(heightInform, weightInform);
+
+            document.write(name + ', o seu IMC e' + Math.round(imc * 100) / 100);
+
+            if(imc < 18.5){
+                show('The your imc is more below of the reference imc.');
+            }
+            else if(imc > 38){
+                show('The yout imc is more high of the reference imc.');
+            }else if( imc <= 38 && imc >= 18){
+                show('The your imc is into the pattern.')
+            }
+
+
+
+        </script>
+
+
+
+    </body>
+
+</html> 
