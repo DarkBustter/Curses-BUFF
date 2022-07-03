@@ -1,0 +1,27 @@
+<canvas width = '600' height = '400'> </canvas>
+
+<script> 
+
+    var scream = document.querySelector('canvas'); 
+    var paint = scream.getContext('2d'); 
+
+    paint.fillStyle = 'grey'; 
+    paint.fillRect(0, 0, 600, 400);
+
+    function drawCicle(evento){ 
+
+        var x = evento.pageX - scream.offsetLeft; 
+        var y = evento.pageY - scream.offsetTop;
+        paint.fillStyle = 'blue'; 
+        paint.beginPath(); 
+        paint.arc(x, y, 10, 0, 2 * 3.14);
+        paint.fill();
+        console.log(x + ',' + y);
+        //O parametro .pageX - serve para pegar a coordenada x e o .pageY a coordenada y 
+        // ja o parametro seguinte scream.offsetLeft - servira para tirar a borda entre a tela e o canvas
+        //logo fzd pageX - scream.offsetLeft - conseguimos, por exemplo, obter a coordenada de ponto zero de x.
+    }
+
+    scream.onclick = drawCicle;
+
+</script>
