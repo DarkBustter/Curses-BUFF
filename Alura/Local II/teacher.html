@@ -1,0 +1,42 @@
+<meta charset = 'UTF-8'>
+
+<canvas width = '700' height = '500'> </canvas>
+
+<script> 
+
+    scream = document.querySelector('canvas'); 
+    paint = scream.getContext('2d');
+
+    function drawSquare(x , y, tamanho, collor){ 
+
+        scream = document.querySelector('canvas'); 
+        paint = scream.getContext('2d');
+
+        paint.fillStyle = collor; 
+        paint.fillRect(x , y, tamanho, tamanho); 
+        paint.strockStyle = collor; 
+        paint.fillStrock(x , y, tamanho, tamanho); 
+    
+    }
+
+    function drawText(text, x, y){ 
+
+        scream = document.querySelector('canvas')
+        paint = scream.getContext('2d'); 
+
+        paint.font = '20px Georgia';
+        paint.filleStyle = 'black';
+        paint.fillText(text, x, y); 
+
+    }
+
+    drawText('Qual e a fracao ? ', 50, 30);
+
+    var y = 50; 
+
+    drawSquare(50, y, 100, 'blue'); 
+    drawSquare(150, y, 100, 'green'); 
+    drawSquare(250, y, 100, 'green'); 
+    drawSquare(350, y, 100, 'blue'); 
+
+</script>
