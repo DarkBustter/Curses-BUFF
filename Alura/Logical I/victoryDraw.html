@@ -1,0 +1,47 @@
+<html>
+    <head> 
+        <meta charset = 'UTF-8'> 
+        <meta name = 'viwerpot'> 
+        <title> Alura </title>
+
+    </head>
+    <body>
+
+        <script>
+
+            function show(phrase){
+
+                document.write(phrase);
+                document.write('<br>');
+
+            }
+
+            function skip(){
+                document.write('<br>');
+            }
+
+            var victorys = parseInt(prompt('Talk with number of victorys: '));
+            var draws = parseInt(prompt('Talk with numebr of draws: '));
+            var points = (victorys * 3) + draws; 
+
+            show('The points your team is : ' + points)
+
+            if(points > 28){
+                show('Your team is the best as last year');
+            }
+            else if(points < 28){
+                show('Your team is the bad as last year');
+            }
+            else{
+                show('Your team is the same as last year');
+            }
+
+            skip()
+            show('FIM');
+        </script>
+
+
+
+    </body>
+
+</html> 
