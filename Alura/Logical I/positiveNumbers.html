@@ -1,0 +1,42 @@
+<html> 
+
+    <head> 
+        <meta charset = 'UTF-8'> 
+        <meta name =  'viewport'>
+        <title> Alura </title>
+
+    </head>
+    <body>
+
+        <script> 
+            function skip(){
+                document.write('<br>')
+            }
+
+            function show(phrase){
+                document.write(phrase)
+                document.write('<br>')
+            }
+
+            contador = 1
+
+            while(contador <= 100){
+                if(contador % 2 == 0){
+                    show(' O numero ' + contador + ' e par.')
+                    contador = (contador + 1);
+                }
+                else{
+                    show('O numero ' + contador + ' e impar.')
+                    contador = (contador + 1);
+
+                }
+        
+            }
+
+            show('Fim');
+
+        </script>
+
+    </body>
+
+</html>
