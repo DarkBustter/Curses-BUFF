@@ -1,0 +1,24 @@
+<canvas width = '600' height = '400'> </canvas>
+
+<script> 
+
+    var scream = document.querySelector('canvas');
+    var paint = scream.getContext('2d');
+    paint.fillStyle = 'lightgray'; 
+    paint.fillRect(0,0,600,400); 
+
+    function drawCicle(x, y, raio, cor){
+        
+        paint.fillStyle = cor ;
+        paint.beginPath(); 
+        paint.arc(x, y, raio, 0, 2 * 3.14); 
+        paint.fill(); 
+    }
+
+    drawCicle(300, 200, 5, 'blue');
+    drawCicle(300, 190, 5, 'red');
+    drawCicle(290, 200, 5, 'green');
+    drawCicle(310, 200, 5, 'black');
+    drawCicle(300, 210, 5, 'purple');
+
+</script>
